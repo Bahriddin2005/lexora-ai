@@ -17,7 +17,7 @@ jobs:
           POSTGRES_DB: lexora_test
         ports: ["5432:5432"]
         options: >-
-          --health-cmd "pg_isready -U lexora" --health-interval 5s --health-timeout 5s --health-retries 10
+          --health-cmd "pg_isready -U lexora -d lexora_test" --health-interval 5s --health-timeout 5s --health-retries 10
       redis:
         image: redis:7
         ports: ["6379:6379"]
@@ -33,9 +33,12 @@ jobs:
         env:
           TEST_DATABASE_URL: postgresql+asyncpg://lexora:lexora@localhost:5432/lexora_test
       - name: Migration is in sync with models
-        run: uv run alembic upgrade head && uv run alembic check
+        # A fresh database: pytest has already created the tables in lexora_test with create_all.
+        run: |
+          PGPASSWORD=lexora psql -h localhost -U lexora -d postgres -c "CREATE DATABASE lexora_migrations"
+          uv run alembic upgrade head && uv run alembic check
         env:
-          DATABASE_URL: postgresql+asyncpg://lexora:lexora@localhost:5432/lexora_test
+          DATABASE_URL: postgresql+asyncpg://lexora:lexora@localhost:5432/lexora_migrations
 
   frontend:
     runs-on: ubuntu-latest
@@ -99,8 +102,9 @@ jobs:
           npm ci
           npm run build
           cp -r .next/static .next/standalone/.next/
-          PORT=3000 nohup node .next/standalone/server.js > frontend.log 2>&1 &
-          npx wait-on -t 60000 http://localhost:3000 http://localhost:8000/healthz
+          # HOSTNAME is the runner's machine name on GitHub; bind the standalone server to all interfaces.
+          PORT=3000 HOSTNAME=0.0.0.0 nohup node .next/standalone/server.js > frontend.log 2>&1 &
+          npx --yes wait-on -t 60000 http://localhost:3000 http://localhost:8000/healthz
       - run: npx playwright install --with-deps chromium
         working-directory: frontend
       - run: npx playwright test
