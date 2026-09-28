@@ -1,0 +1,503 @@
+[
+  {
+    "language_code": "en", "lemma": "run", "cefr_level": "A1", "frequency_zipf": 5.5,
+    "etymology": {"en": "From Old English rinnan and Old Norse rinna.", "uz": "Qadimgi ingliz tilidagi rinnan va qadimgi skandinav tilidagi rinna soʻzlaridan."},
+    "pronunciations": [{"ipa": "/rʌn/", "accent": "US"}, {"ipa": "/rʌn/", "accent": "UK"}],
+    "forms": [{"form": "ran", "tags": ["past"]}, {"form": "running", "tags": ["present participle"]}, {"form": "runs", "tags": ["third-person singular"]}],
+    "senses": [
+      {"pos": "verb", "cefr_level": "A1",
+       "definitions": {"en": "to move swiftly on foot so that both feet leave the ground during each stride", "uz": "oyoqda tez harakatlanmoq, yugurmoq"},
+       "translations": {"uz": [{"text": "yugurmoq", "is_primary": true}, {"text": "chopmoq"}], "ru": [{"text": "бежать", "is_primary": true}, {"text": "бегать"}], "tr": [{"text": "koşmak", "is_primary": true}]},
+       "examples": [{"text": "She runs every morning.", "translations": {"uz": "U har kuni ertalab yuguradi.", "ru": "Она бегает каждое утро."}}],
+       "synonyms": ["sprint", "jog", "dash"], "antonyms": ["walk"]},
+      {"pos": "verb", "domain": "business", "cefr_level": "B1",
+       "definitions": {"en": "to manage or be in charge of a business or organization", "uz": "boshqarmoq, rahbarlik qilmoq"},
+       "translations": {"uz": [{"text": "boshqarmoq", "is_primary": true}], "ru": [{"text": "руководить", "is_primary": true}, {"text": "управлять"}], "tr": [{"text": "yönetmek", "is_primary": true}]},
+       "examples": [{"text": "He runs a small bakery.", "translations": {"uz": "U kichik novvoyxonani boshqaradi."}}],
+       "synonyms": ["manage"]},
+      {"pos": "verb", "domain": "computing", "cefr_level": "B1",
+       "definitions": {"en": "to execute a computer program", "uz": "dasturni ishga tushirmoq, bajarmoq"},
+       "translations": {"uz": [{"text": "ishga tushirmoq", "is_primary": true}], "ru": [{"text": "запускать", "is_primary": true}], "tr": [{"text": "çalıştırmak", "is_primary": true}]},
+       "examples": [{"text": "Run the script again.", "translations": {"uz": "Skriptni qayta ishga tushiring."}}],
+       "synonyms": ["execute"]},
+      {"pos": "noun", "cefr_level": "A2",
+       "definitions": {"en": "an act or spell of running", "uz": "yugurish"},
+       "translations": {"uz": [{"text": "yugurish", "is_primary": true}], "ru": [{"text": "бег", "is_primary": true}, {"text": "пробежка"}], "tr": [{"text": "koşu", "is_primary": true}]},
+       "examples": [{"text": "I go for a run every evening.", "translations": {"uz": "Men har kuni kechqurun yugurishga chiqaman."}}]}
+    ],
+    "relations": {"phrase": ["run out of", "run into", "in the long run"]}
+  },
+  {
+    "language_code": "en", "lemma": "book", "cefr_level": "A1", "frequency_zipf": 5.4,
+    "pronunciations": [{"ipa": "/bʊk/", "accent": "US"}, {"ipa": "/bʊk/", "accent": "UK"}],
+    "forms": [{"form": "books", "tags": ["plural"]}, {"form": "booked", "tags": ["past"]}, {"form": "booking", "tags": ["present participle"]}],
+    "senses": [
+      {"pos": "noun", "cefr_level": "A1",
+       "definitions": {"en": "a written or printed work consisting of pages bound together", "uz": "bogʻlangan sahifalardan iborat yozma yoki bosma asar"},
+       "translations": {"uz": [{"text": "kitob", "is_primary": true}], "ru": [{"text": "книга", "is_primary": true}], "tr": [{"text": "kitap", "is_primary": true}]},
+       "examples": [{"text": "I am reading a good book.", "translations": {"uz": "Men yaxshi kitob oʻqiyapman.", "ru": "Я читаю хорошую книгу."}}],
+       "synonyms": ["volume"]},
+      {"pos": "verb", "cefr_level": "A2",
+       "definitions": {"en": "to reserve a place, ticket or service in advance", "uz": "oldindan band qilmoq, bron qilmoq"},
+       "translations": {"uz": [{"text": "band qilmoq", "is_primary": true}, {"text": "bron qilmoq"}], "ru": [{"text": "бронировать", "is_primary": true}, {"text": "заказывать"}], "tr": [{"text": "rezervasyon yapmak", "is_primary": true}]},
+       "examples": [{"text": "We booked a table for two.", "translations": {"uz": "Biz ikki kishilik stol band qildik."}}],
+       "synonyms": ["reserve"]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "apple", "cefr_level": "A1", "frequency_zipf": 4.7,
+    "pronunciations": [{"ipa": "/ˈæp.əl/", "accent": "US"}, {"ipa": "/ˈæp.əl/", "accent": "UK"}],
+    "forms": [{"form": "apples", "tags": ["plural"]}],
+    "senses": [
+      {"pos": "noun", "cefr_level": "A1",
+       "definitions": {"en": "the round fruit of a tree of the rose family, with red, yellow or green skin", "uz": "qizil, sariq yoki yashil poʻstli dumaloq meva; olma"},
+       "translations": {"uz": [{"text": "olma", "is_primary": true}], "ru": [{"text": "яблоко", "is_primary": true}], "tr": [{"text": "elma", "is_primary": true}]},
+       "examples": [{"text": "An apple a day keeps the doctor away.", "translations": {"uz": "Kuniga bitta olma yegan odam shifokorga muhtoj boʻlmaydi."}}]},
+      {"pos": "proper_noun", "domain": "business",
+       "definitions": {"en": "Apple Inc., an American technology company", "uz": "Apple Inc. — AQShning texnologiya kompaniyasi"},
+       "examples": [{"text": "Apple released a new phone.", "translations": {"uz": "Apple yangi telefon chiqardi."}}]}
+    ],
+    "relations": {"phrase": ["the apple of someone's eye", "the Big Apple"]}
+  },
+  {
+    "language_code": "en", "lemma": "beautiful", "cefr_level": "A1", "frequency_zipf": 5.3,
+    "pronunciations": [{"ipa": "/ˈbjuː.tɪ.fəl/", "accent": "UK"}, {"ipa": "/ˈbjuː.t̬ə.fəl/", "accent": "US"}],
+    "senses": [
+      {"pos": "adj", "cefr_level": "A1",
+       "definitions": {"en": "very attractive or pleasing to look at, hear or experience", "uz": "juda chiroyli, koʻrkam, yoqimli"},
+       "translations": {"uz": [{"text": "chiroyli", "is_primary": true}, {"text": "goʻzal"}], "ru": [{"text": "красивый", "is_primary": true}, {"text": "прекрасный"}], "tr": [{"text": "güzel", "is_primary": true}]},
+       "examples": [{"text": "What a beautiful day!", "translations": {"uz": "Qanday goʻzal kun!", "ru": "Какой прекрасный день!"}}],
+       "synonyms": ["pretty", "lovely", "gorgeous"], "antonyms": ["ugly"]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "school", "cefr_level": "A1", "frequency_zipf": 5.5,
+    "pronunciations": [{"ipa": "/skuːl/", "accent": "US"}, {"ipa": "/skuːl/", "accent": "UK"}],
+    "forms": [{"form": "schools", "tags": ["plural"]}],
+    "senses": [
+      {"pos": "noun", "cefr_level": "A1",
+       "definitions": {"en": "a place where children go to be educated", "uz": "bolalar taʼlim oladigan muassasa"},
+       "translations": {"uz": [{"text": "maktab", "is_primary": true}], "ru": [{"text": "школа", "is_primary": true}], "tr": [{"text": "okul", "is_primary": true}]},
+       "examples": [{"text": "My sister goes to school by bus.", "translations": {"uz": "Singlim maktabga avtobusda boradi.", "ru": "Моя сестра ездит в школу на автобусе."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "water", "cefr_level": "A1", "frequency_zipf": 5.5,
+    "pronunciations": [{"ipa": "/ˈwɑː.t̬ɚ/", "accent": "US"}, {"ipa": "/ˈwɔː.tə/", "accent": "UK"}],
+    "senses": [
+      {"pos": "noun", "cefr_level": "A1",
+       "definitions": {"en": "the clear liquid that falls as rain and forms seas, lakes and rivers", "uz": "yomgʻir sifatida yogʻadigan, dengiz, koʻl va daryolarni hosil qiladigan tiniq suyuqlik"},
+       "translations": {"uz": [{"text": "suv", "is_primary": true}], "ru": [{"text": "вода", "is_primary": true}], "tr": [{"text": "su", "is_primary": true}]},
+       "examples": [{"text": "Can I have a glass of water?", "translations": {"uz": "Bir stakan suv bera olasizmi?"}}]},
+      {"pos": "verb", "cefr_level": "A2",
+       "definitions": {"en": "to pour water on plants or soil", "uz": "oʻsimlik yoki tuproqqa suv quymoq"},
+       "translations": {"uz": [{"text": "sugʻormoq", "is_primary": true}], "ru": [{"text": "поливать", "is_primary": true}], "tr": [{"text": "sulamak", "is_primary": true}]},
+       "examples": [{"text": "Don't forget to water the flowers.", "translations": {"uz": "Gullarni sugʻorishni unutmang."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "hello", "cefr_level": "A1", "frequency_zipf": 5.0,
+    "pronunciations": [{"ipa": "/həˈloʊ/", "accent": "US"}, {"ipa": "/heˈləʊ/", "accent": "UK"}],
+    "senses": [
+      {"pos": "interj", "cefr_level": "A1",
+       "definitions": {"en": "used as a greeting when you meet someone or answer the phone", "uz": "uchrashganda yoki telefonga javob berganda aytiladigan salomlashish soʻzi"},
+       "translations": {"uz": [{"text": "salom", "is_primary": true}], "ru": [{"text": "привет", "is_primary": true}, {"text": "здравствуйте"}], "tr": [{"text": "merhaba", "is_primary": true}]},
+       "examples": [{"text": "Hello, how are you?", "translations": {"uz": "Salom, qalaysiz?"}}],
+       "synonyms": ["hi"], "antonyms": ["goodbye"]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "love", "cefr_level": "A1", "frequency_zipf": 5.9,
+    "pronunciations": [{"ipa": "/lʌv/", "accent": "US"}, {"ipa": "/lʌv/", "accent": "UK"}],
+    "senses": [
+      {"pos": "verb", "cefr_level": "A1",
+       "definitions": {"en": "to feel deep affection for someone or something", "uz": "kimnidir yoki nimanidir chin dildan yaxshi koʻrmoq"},
+       "translations": {"uz": [{"text": "sevmoq", "is_primary": true}, {"text": "yaxshi koʻrmoq"}], "ru": [{"text": "любить", "is_primary": true}], "tr": [{"text": "sevmek", "is_primary": true}]},
+       "examples": [{"text": "I love my family.", "translations": {"uz": "Men oilamni yaxshi koʻraman."}}],
+       "antonyms": ["hate"]},
+      {"pos": "noun", "cefr_level": "A2",
+       "definitions": {"en": "a strong feeling of deep affection", "uz": "chuqur mehr, sevgi tuygʻusi"},
+       "translations": {"uz": [{"text": "sevgi", "is_primary": true}, {"text": "muhabbat"}], "ru": [{"text": "любовь", "is_primary": true}], "tr": [{"text": "aşk", "is_primary": true}, {"text": "sevgi"}]},
+       "examples": [{"text": "Love is all you need.", "translations": {"uz": "Sizga faqat sevgi kerak."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "time", "cefr_level": "A1", "frequency_zipf": 6.2,
+    "pronunciations": [{"ipa": "/taɪm/", "accent": "US"}, {"ipa": "/taɪm/", "accent": "UK"}],
+    "senses": [
+      {"pos": "noun", "cefr_level": "A1",
+       "definitions": {"en": "what is measured in minutes, hours, days and years", "uz": "daqiqa, soat, kun va yillar bilan oʻlchanadigan narsa"},
+       "translations": {"uz": [{"text": "vaqt", "is_primary": true}], "ru": [{"text": "время", "is_primary": true}], "tr": [{"text": "zaman", "is_primary": true}]},
+       "examples": [{"text": "What time is it?", "translations": {"uz": "Soat necha?"}}]},
+      {"pos": "noun", "cefr_level": "A2",
+       "definitions": {"en": "an occasion when something happens", "uz": "biror narsa sodir boʻladigan holat, marta"},
+       "translations": {"uz": [{"text": "marta", "is_primary": true}], "ru": [{"text": "раз", "is_primary": true}], "tr": [{"text": "kez", "is_primary": true}, {"text": "defa"}]},
+       "examples": [{"text": "I've seen this film three times.", "translations": {"uz": "Men bu filmni uch marta koʻrganman."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "work", "cefr_level": "A1", "frequency_zipf": 5.8,
+    "pronunciations": [{"ipa": "/wɝːk/", "accent": "US"}, {"ipa": "/wɜːk/", "accent": "UK"}],
+    "forms": [{"form": "worked", "tags": ["past"]}, {"form": "working", "tags": ["present participle"]}, {"form": "works", "tags": ["third-person singular"]}],
+    "senses": [
+      {"pos": "verb", "cefr_level": "A1",
+       "definitions": {"en": "to do a job, especially one that you are paid for", "uz": "ish bajarmoq, ayniqsa haq evaziga"},
+       "translations": {"uz": [{"text": "ishlamoq", "is_primary": true}], "ru": [{"text": "работать", "is_primary": true}], "tr": [{"text": "çalışmak", "is_primary": true}]},
+       "examples": [{"text": "She works at a hospital.", "translations": {"uz": "U kasalxonada ishlaydi."}}]},
+      {"pos": "noun", "cefr_level": "A1",
+       "definitions": {"en": "a job or activity that requires effort", "uz": "kuch talab qiladigan faoliyat, ish"},
+       "translations": {"uz": [{"text": "ish", "is_primary": true}], "ru": [{"text": "работа", "is_primary": true}], "tr": [{"text": "iş", "is_primary": true}]},
+       "examples": [{"text": "I have a lot of work today.", "translations": {"uz": "Bugun ishim koʻp."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "go", "cefr_level": "A1", "frequency_zipf": 6.2,
+    "pronunciations": [{"ipa": "/ɡoʊ/", "accent": "US"}, {"ipa": "/ɡəʊ/", "accent": "UK"}],
+    "forms": [{"form": "went", "tags": ["past"]}, {"form": "gone", "tags": ["past participle"]}, {"form": "going", "tags": ["present participle"]}, {"form": "goes", "tags": ["third-person singular"]}],
+    "senses": [
+      {"pos": "verb", "cefr_level": "A1",
+       "definitions": {"en": "to move or travel to a place", "uz": "biror joyga harakatlanmoq, bormoq"},
+       "translations": {"uz": [{"text": "bormoq", "is_primary": true}, {"text": "ketmoq"}], "ru": [{"text": "идти", "is_primary": true}, {"text": "ехать"}], "tr": [{"text": "gitmek", "is_primary": true}]},
+       "examples": [{"text": "Let's go home.", "translations": {"uz": "Uyga ketaylik."}}],
+       "antonyms": ["come", "stay"]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "house", "cefr_level": "A1", "frequency_zipf": 5.5,
+    "pronunciations": [{"ipa": "/haʊs/", "accent": "US"}, {"ipa": "/haʊs/", "accent": "UK"}],
+    "forms": [{"form": "houses", "tags": ["plural"]}],
+    "senses": [
+      {"pos": "noun", "cefr_level": "A1",
+       "definitions": {"en": "a building that people live in", "uz": "odamlar yashaydigan bino"},
+       "translations": {"uz": [{"text": "uy", "is_primary": true}], "ru": [{"text": "дом", "is_primary": true}], "tr": [{"text": "ev", "is_primary": true}]},
+       "examples": [{"text": "They live in a big house.", "translations": {"uz": "Ular katta uyda yashaydi."}}],
+       "synonyms": ["home"]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "friend", "cefr_level": "A1", "frequency_zipf": 5.4,
+    "pronunciations": [{"ipa": "/frend/", "accent": "US"}, {"ipa": "/frend/", "accent": "UK"}],
+    "forms": [{"form": "friends", "tags": ["plural"]}],
+    "senses": [
+      {"pos": "noun", "cefr_level": "A1",
+       "definitions": {"en": "a person you know well and like", "uz": "yaxshi taniydigan va yoqtiradigan odam"},
+       "translations": {"uz": [{"text": "doʻst", "is_primary": true}, {"text": "oʻrtoq"}], "ru": [{"text": "друг", "is_primary": true}], "tr": [{"text": "arkadaş", "is_primary": true}]},
+       "examples": [{"text": "He is my best friend.", "translations": {"uz": "U mening eng yaqin doʻstim."}}],
+       "antonyms": ["enemy"]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "computer", "cefr_level": "A1", "frequency_zipf": 5.0, "tags": ["tech"],
+    "pronunciations": [{"ipa": "/kəmˈpjuː.t̬ɚ/", "accent": "US"}, {"ipa": "/kəmˈpjuː.tə/", "accent": "UK"}],
+    "senses": [
+      {"pos": "noun", "domain": "computing", "cefr_level": "A1",
+       "definitions": {"en": "an electronic machine that stores and processes data", "uz": "maʼlumotlarni saqlaydigan va qayta ishlaydigan elektron qurilma"},
+       "translations": {"uz": [{"text": "kompyuter", "is_primary": true}], "ru": [{"text": "компьютер", "is_primary": true}], "tr": [{"text": "bilgisayar", "is_primary": true}]},
+       "examples": [{"text": "My computer is very slow.", "translations": {"uz": "Kompyuterim juda sekin ishlayapti."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "language", "cefr_level": "A1", "frequency_zipf": 5.1,
+    "pronunciations": [{"ipa": "/ˈlæŋ.ɡwɪdʒ/", "accent": "US"}, {"ipa": "/ˈlæŋ.ɡwɪdʒ/", "accent": "UK"}],
+    "senses": [
+      {"pos": "noun", "cefr_level": "A1",
+       "definitions": {"en": "a system of communication used by the people of a particular country or community", "uz": "maʼlum bir xalq yoki jamiyat foydalanadigan muloqot tizimi"},
+       "translations": {"uz": [{"text": "til", "is_primary": true}], "ru": [{"text": "язык", "is_primary": true}], "tr": [{"text": "dil", "is_primary": true}]},
+       "examples": [{"text": "How many languages do you speak?", "translations": {"uz": "Nechta tilda gaplashasiz?"}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "learn", "cefr_level": "A1", "frequency_zipf": 5.2,
+    "pronunciations": [{"ipa": "/lɝːn/", "accent": "US"}, {"ipa": "/lɜːn/", "accent": "UK"}],
+    "forms": [{"form": "learned", "tags": ["past"]}, {"form": "learnt", "tags": ["past", "UK"]}, {"form": "learning", "tags": ["present participle"]}],
+    "senses": [
+      {"pos": "verb", "cefr_level": "A1",
+       "definitions": {"en": "to get knowledge or skill by studying, practising or experience", "uz": "oʻqish, mashq yoki tajriba orqali bilim yoki koʻnikma olmoq"},
+       "translations": {"uz": [{"text": "oʻrganmoq", "is_primary": true}], "ru": [{"text": "учить", "is_primary": true}, {"text": "изучать"}], "tr": [{"text": "öğrenmek", "is_primary": true}]},
+       "examples": [{"text": "I want to learn English.", "translations": {"uz": "Men ingliz tilini oʻrganmoqchiman."}}],
+       "synonyms": ["study"]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "good", "cefr_level": "A1", "frequency_zipf": 6.2,
+    "pronunciations": [{"ipa": "/ɡʊd/", "accent": "US"}, {"ipa": "/ɡʊd/", "accent": "UK"}],
+    "forms": [{"form": "better", "tags": ["comparative"]}, {"form": "best", "tags": ["superlative"]}],
+    "senses": [
+      {"pos": "adj", "cefr_level": "A1",
+       "definitions": {"en": "of high quality or pleasant", "uz": "sifatli, yoqimli"},
+       "translations": {"uz": [{"text": "yaxshi", "is_primary": true}], "ru": [{"text": "хороший", "is_primary": true}], "tr": [{"text": "iyi", "is_primary": true}]},
+       "examples": [{"text": "This is a good idea.", "translations": {"uz": "Bu yaxshi fikr."}}],
+       "antonyms": ["bad"]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "happy", "cefr_level": "A1", "frequency_zipf": 5.5,
+    "pronunciations": [{"ipa": "/ˈhæp.i/", "accent": "US"}, {"ipa": "/ˈhæp.i/", "accent": "UK"}],
+    "senses": [
+      {"pos": "adj", "cefr_level": "A1",
+       "definitions": {"en": "feeling or showing pleasure", "uz": "xursandchilik his qilayotgan yoki koʻrsatayotgan"},
+       "translations": {"uz": [{"text": "baxtli", "is_primary": true}, {"text": "xursand"}], "ru": [{"text": "счастливый", "is_primary": true}], "tr": [{"text": "mutlu", "is_primary": true}]},
+       "examples": [{"text": "I'm happy to see you.", "translations": {"uz": "Sizni koʻrganimdan xursandman."}}],
+       "synonyms": ["glad", "cheerful"], "antonyms": ["sad"]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "bank", "cefr_level": "A2", "frequency_zipf": 5.1,
+    "pronunciations": [{"ipa": "/bæŋk/", "accent": "US"}, {"ipa": "/bæŋk/", "accent": "UK"}],
+    "forms": [{"form": "banks", "tags": ["plural"]}],
+    "senses": [
+      {"pos": "noun", "domain": "economics", "cefr_level": "A2",
+       "definitions": {"en": "an organization where people and businesses keep and borrow money", "uz": "odamlar va korxonalar pul saqlaydigan va qarz oladigan tashkilot"},
+       "translations": {"uz": [{"text": "bank", "is_primary": true}], "ru": [{"text": "банк", "is_primary": true}], "tr": [{"text": "banka", "is_primary": true}]},
+       "examples": [{"text": "I need to go to the bank.", "translations": {"uz": "Bankka borishim kerak."}}]},
+      {"pos": "noun", "cefr_level": "B1",
+       "definitions": {"en": "the land along the side of a river", "uz": "daryo boʻyidagi yer, qirgʻoq"},
+       "translations": {"uz": [{"text": "qirgʻoq", "is_primary": true}], "ru": [{"text": "берег", "is_primary": true}], "tr": [{"text": "kıyı", "is_primary": true}]},
+       "examples": [{"text": "We sat on the bank of the river.", "translations": {"uz": "Biz daryo qirgʻogʻida oʻtirdik."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "deadline", "cefr_level": "B1", "frequency_zipf": 4.2,
+    "pronunciations": [{"ipa": "/ˈded.laɪn/", "accent": "US"}, {"ipa": "/ˈded.laɪn/", "accent": "UK"}],
+    "senses": [
+      {"pos": "noun", "cefr_level": "B1",
+       "definitions": {"en": "the latest time or date by which something must be done", "uz": "biror ish bajarilishi shart boʻlgan eng soʻnggi muddat"},
+       "translations": {"uz": [{"text": "oxirgi muddat", "is_primary": true}], "ru": [{"text": "крайний срок", "is_primary": true}, {"text": "дедлайн"}], "tr": [{"text": "son tarih", "is_primary": true}, {"text": "teslim tarihi"}]},
+       "examples": [{"text": "The deadline for the project is Friday.", "translations": {"uz": "Loyihaning oxirgi muddati — juma."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "cringe", "cefr_level": "B2", "frequency_zipf": 3.3, "tags": ["slang"],
+    "pronunciations": [{"ipa": "/krɪndʒ/", "accent": "US"}, {"ipa": "/krɪndʒ/", "accent": "UK"}],
+    "forms": [{"form": "cringed", "tags": ["past"]}, {"form": "cringing", "tags": ["present participle"]}],
+    "senses": [
+      {"pos": "verb", "cefr_level": "B2",
+       "definitions": {"en": "to feel very embarrassed or uncomfortable about something", "uz": "biror narsadan qattiq uyalmoq, noqulay his qilmoq"},
+       "translations": {"uz": [{"text": "uyalib ketmoq", "is_primary": true}], "ru": [{"text": "испытывать неловкость", "is_primary": true}], "tr": [{"text": "utanmak", "is_primary": true}]},
+       "examples": [{"text": "I cringe when I hear my old songs.", "translations": {"uz": "Eski qoʻshiqlarimni eshitsam, uyalib ketaman."}}]},
+      {"pos": "adj", "register": "slang",
+       "definitions": {"en": "(slang) so awkward or embarrassing that it makes you uncomfortable", "uz": "(yoshlar jargoni) shunchalik uyatli yoki gʻalatiki, koʻrgan odam noqulay his qiladi"},
+       "translations": {"uz": [{"text": "uyatli", "is_primary": true}, {"text": "noqulay"}], "ru": [{"text": "кринжовый", "is_primary": true}], "tr": [{"text": "utanç verici", "is_primary": true}]},
+       "examples": [{"text": "That video was so cringe.", "translations": {"uz": "U video juda uyatli edi."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "python", "frequency_zipf": 3.9, "tags": ["tech"],
+    "pronunciations": [{"ipa": "/ˈpaɪ.θɑːn/", "accent": "US"}, {"ipa": "/ˈpaɪ.θən/", "accent": "UK"}],
+    "senses": [
+      {"pos": "noun", "cefr_level": "C1",
+       "definitions": {"en": "a large snake that kills animals by squeezing them", "uz": "oʻljasini siqib oʻldiradigan katta ilon"},
+       "translations": {"uz": [{"text": "piton", "is_primary": true}], "ru": [{"text": "питон", "is_primary": true}], "tr": [{"text": "piton", "is_primary": true}]},
+       "examples": [{"text": "The python swallowed a rabbit.", "translations": {"uz": "Piton quyonni yutib yubordi."}}]},
+      {"pos": "proper_noun", "domain": "computing",
+       "definitions": {"en": "Python, a popular high-level programming language", "uz": "Python — mashhur yuqori darajali dasturlash tili"},
+       "examples": [{"text": "I write my scripts in Python.", "translations": {"uz": "Men skriptlarimni Python tilida yozaman."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "prompt", "cefr_level": "B2", "frequency_zipf": 4.2, "tags": ["ai"],
+    "pronunciations": [{"ipa": "/prɑːmpt/", "accent": "US"}, {"ipa": "/prɒmpt/", "accent": "UK"}],
+    "senses": [
+      {"pos": "noun", "domain": "ai",
+       "definitions": {"en": "an instruction or question given to an AI model", "uz": "sunʼiy intellekt modeliga beriladigan koʻrsatma yoki savol"},
+       "translations": {"uz": [{"text": "prompt", "is_primary": true}, {"text": "soʻrov"}], "ru": [{"text": "промпт", "is_primary": true}, {"text": "запрос"}], "tr": [{"text": "istem", "is_primary": true}]},
+       "examples": [{"text": "Write a clear prompt to get a better answer.", "translations": {"uz": "Yaxshiroq javob olish uchun aniq prompt yozing."}}]},
+      {"pos": "adj", "cefr_level": "B2",
+       "definitions": {"en": "done quickly and without delay", "uz": "tez, kechiktirmasdan bajarilgan"},
+       "translations": {"uz": [{"text": "tezkor", "is_primary": true}], "ru": [{"text": "быстрый", "is_primary": true}, {"text": "незамедлительный"}], "tr": [{"text": "hızlı", "is_primary": true}]},
+       "examples": [{"text": "Thank you for your prompt reply.", "translations": {"uz": "Tezkor javobingiz uchun rahmat."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "hallucination", "cefr_level": "C1", "frequency_zipf": 3.3, "tags": ["ai"],
+    "pronunciations": [{"ipa": "/həˌluː.sɪˈneɪ.ʃən/", "accent": "US"}],
+    "senses": [
+      {"pos": "noun", "domain": "ai",
+       "definitions": {"en": "a confident but false or made-up answer produced by an AI model", "uz": "sunʼiy intellekt modelining ishonch bilan bergan, lekin notoʻgʻri yoki toʻqib chiqarilgan javobi"},
+       "translations": {"uz": [{"text": "gallyutsinatsiya", "is_primary": true}], "ru": [{"text": "галлюцинация", "is_primary": true}], "tr": [{"text": "halüsinasyon", "is_primary": true}]},
+       "examples": [{"text": "The chatbot's answer was a hallucination.", "translations": {"uz": "Chatbotning javobi gallyutsinatsiya edi."}}]},
+      {"pos": "noun", "domain": "medicine", "cefr_level": "C1",
+       "definitions": {"en": "the experience of seeing or hearing something that is not really there", "uz": "aslida mavjud boʻlmagan narsani koʻrish yoki eshitish holati"},
+       "translations": {"uz": [{"text": "gallyutsinatsiya", "is_primary": true}, {"text": "alahsirash"}], "ru": [{"text": "галлюцинация", "is_primary": true}], "tr": [{"text": "halüsinasyon", "is_primary": true}]},
+       "examples": [{"text": "High fever can cause hallucinations.", "translations": {"uz": "Yuqori harorat gallyutsinatsiyaga sabab boʻlishi mumkin."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "LLM", "entry_type": "abbreviation", "tags": ["ai"],
+    "pronunciations": [{"ipa": "/ˌel.elˈem/", "accent": "US"}],
+    "senses": [
+      {"pos": "noun", "domain": "ai",
+       "definitions": {"en": "large language model: an AI model trained on huge amounts of text to understand and generate language", "uz": "katta til modeli: tilni tushunish va matn yaratish uchun ulkan matnlarda oʻqitilgan sunʼiy intellekt modeli"},
+       "translations": {"uz": [{"text": "katta til modeli", "is_primary": true}], "ru": [{"text": "большая языковая модель", "is_primary": true}], "tr": [{"text": "büyük dil modeli", "is_primary": true}]},
+       "examples": [{"text": "Gemini is an LLM.", "translations": {"uz": "Gemini — katta til modeli."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "vibe coding", "entry_type": "phrase", "tags": ["ai", "new", "slang"],
+    "etymology": {"en": "Coined by Andrej Karpathy in February 2025.", "uz": "2025-yil fevralida Andrey Karpatiy tomonidan ommalashtirilgan."},
+    "pronunciations": [{"ipa": "/ˈvaɪb ˌkoʊ.dɪŋ/", "accent": "US"}],
+    "senses": [
+      {"pos": "noun", "domain": "ai", "register": "informal",
+       "definitions": {"en": "a way of programming in which you describe what you want and an AI writes most of the code", "uz": "dasturchi nima kerakligini tushuntirib, kodning asosiy qismini sunʼiy intellektga yozdiradigan dasturlash usuli"},
+       "translations": {"uz": [{"text": "vayb-koding", "is_primary": true}], "ru": [{"text": "вайб-кодинг", "is_primary": true}]},
+       "examples": [{"text": "He built the app in a weekend with vibe coding.", "translations": {"uz": "U ilovani vayb-koding orqali bir dam olish kunida yaratdi."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "serendipity", "cefr_level": "C2", "frequency_zipf": 3.0,
+    "etymology": {"en": "Coined by Horace Walpole in 1754, after the Persian fairy tale The Three Princes of Serendip.", "uz": "1754-yilda Horas Uolpol tomonidan fors ertagi «Serendipning uch shahzodasi» asosida yaratilgan."},
+    "pronunciations": [{"ipa": "/ˌser.ənˈdɪp.ə.t̬i/", "accent": "US"}, {"ipa": "/ˌser.ənˈdɪp.ə.ti/", "accent": "UK"}],
+    "senses": [
+      {"pos": "noun", "cefr_level": "C2",
+       "definitions": {"en": "the fact of finding interesting or valuable things by chance", "uz": "qiziqarli yoki qimmatli narsani tasodifan topib olish, kutilmagan omad"},
+       "translations": {"uz": [{"text": "kutilmagan omad", "is_primary": true}], "ru": [{"text": "счастливая случайность", "is_primary": true}], "tr": [{"text": "mutlu tesadüf", "is_primary": true}]},
+       "examples": [{"text": "Meeting her was pure serendipity.", "translations": {"uz": "U bilan tanishib qolishim sof kutilmagan omad edi."}}]}
+    ]
+  },
+  {
+    "language_code": "en", "lemma": "knowledge", "cefr_level": "B1", "frequency_zipf": 5.0,
+    "pronunciations": [{"ipa": "/ˈnɑː.lɪdʒ/", "accent": "US"}, {"ipa": "/ˈnɒl.ɪdʒ/", "accent": "UK"}],
+    "senses": [
+      {"pos": "noun", "cefr_level": "B1",
+       "definitions": {"en": "understanding of or information about a subject gained through experience or study", "uz": "tajriba yoki oʻqish orqali olingan tushuncha va maʼlumot"},
+       "translations": {"uz": [{"text": "bilim", "is_primary": true}], "ru": [{"text": "знание", "is_primary": true}, {"text": "знания"}], "tr": [{"text": "bilgi", "is_primary": true}]},
+       "examples": [{"text": "Knowledge is power.", "translations": {"uz": "Bilim — kuch."}}]}
+    ]
+  },
+  {
+    "language_code": "uz", "lemma": "maktab",
+    "etymology": {"en": "From Arabic maktab ('place of writing').", "uz": "Arabcha maktab («yoziladigan joy») soʻzidan."},
+    "forms": [{"form": "maktabga"}, {"form": "maktabda"}, {"form": "maktablar", "tags": ["plural"]}],
+    "senses": [
+      {"pos": "noun",
+       "definitions": {"uz": "bolalarga umumiy taʼlim beriladigan muassasa", "en": "an institution where children receive general education; school"},
+       "translations": {"en": [{"text": "school", "is_primary": true}], "ru": [{"text": "школа", "is_primary": true}], "tr": [{"text": "okul", "is_primary": true}]},
+       "examples": [{"text": "Men har kuni maktabga boraman.", "translations": {"en": "I go to school every day.", "ru": "Я каждый день хожу в школу."}}]}
+    ]
+  },
+  {
+    "language_code": "uz", "lemma": "kitob",
+    "etymology": {"en": "From Arabic kitāb ('book, writing').", "uz": "Arabcha kitob («yozuv, kitob») soʻzidan."},
+    "forms": [{"form": "kitoblar", "tags": ["plural"]}, {"form": "kitobni"}],
+    "senses": [
+      {"pos": "noun",
+       "definitions": {"uz": "bogʻlangan sahifalardan iborat yozma yoki bosma asar", "en": "a written or printed work of bound pages; book"},
+       "translations": {"en": [{"text": "book", "is_primary": true}], "ru": [{"text": "книга", "is_primary": true}], "tr": [{"text": "kitap", "is_primary": true}]},
+       "examples": [{"text": "Bu kitob juda qiziqarli.", "translations": {"en": "This book is very interesting."}}]}
+    ]
+  },
+  {
+    "language_code": "uz", "lemma": "salom",
+    "senses": [
+      {"pos": "interj",
+       "definitions": {"uz": "uchrashganda aytiladigan salomlashish soʻzi", "en": "a greeting used when meeting someone"},
+       "translations": {"en": [{"text": "hello", "is_primary": true}, {"text": "hi"}], "ru": [{"text": "привет", "is_primary": true}, {"text": "здравствуйте"}], "tr": [{"text": "merhaba", "is_primary": true}, {"text": "selam"}]},
+       "examples": [{"text": "Salom, ishlaring qalay?", "translations": {"en": "Hi, how are things?"}}]}
+    ]
+  },
+  {
+    "language_code": "uz", "lemma": "suv",
+    "senses": [
+      {"pos": "noun",
+       "definitions": {"uz": "rangsiz, tiniq suyuqlik; hayot manbai", "en": "a colourless, clear liquid; water"},
+       "translations": {"en": [{"text": "water", "is_primary": true}], "ru": [{"text": "вода", "is_primary": true}], "tr": [{"text": "su", "is_primary": true}]},
+       "examples": [{"text": "Menga bir stakan suv bering.", "translations": {"en": "Give me a glass of water."}}]}
+    ]
+  },
+  {
+    "language_code": "uz", "lemma": "oʻgʻil",
+    "forms": [{"form": "oʻgʻli"}, {"form": "oʻgʻlim"}, {"form": "oʻgʻillar", "tags": ["plural"]}],
+    "senses": [
+      {"pos": "noun",
+       "definitions": {"uz": "ota-onaning erkak farzandi", "en": "a male child of a parent; son"},
+       "translations": {"en": [{"text": "son", "is_primary": true}], "ru": [{"text": "сын", "is_primary": true}], "tr": [{"text": "oğul", "is_primary": true}]},
+       "examples": [{"text": "Ularning ikki oʻgʻli bor.", "translations": {"en": "They have two sons."}}]}
+    ]
+  },
+  {
+    "language_code": "uz", "lemma": "rahmat",
+    "senses": [
+      {"pos": "interj",
+       "definitions": {"uz": "minnatdorchilik bildiruvchi soʻz", "en": "a word used to express gratitude"},
+       "translations": {"en": [{"text": "thank you", "is_primary": true}, {"text": "thanks"}], "ru": [{"text": "спасибо", "is_primary": true}], "tr": [{"text": "teşekkürler", "is_primary": true}, {"text": "sağ ol"}]},
+       "examples": [{"text": "Yordamingiz uchun rahmat!", "translations": {"en": "Thank you for your help!"}}]}
+    ]
+  },
+  {
+    "language_code": "ru", "lemma": "школа",
+    "forms": [{"form": "школы"}, {"form": "школе"}, {"form": "школу"}],
+    "senses": [
+      {"pos": "noun",
+       "definitions": {"en": "an educational institution for children; school", "uz": "bolalar taʼlim oladigan muassasa; maktab"},
+       "translations": {"en": [{"text": "school", "is_primary": true}], "uz": [{"text": "maktab", "is_primary": true}], "tr": [{"text": "okul", "is_primary": true}]},
+       "examples": [{"text": "Дети идут в школу.", "translations": {"en": "The children are going to school.", "uz": "Bolalar maktabga ketyapti."}}]}
+    ]
+  },
+  {
+    "language_code": "ru", "lemma": "книга",
+    "forms": [{"form": "книги"}, {"form": "книгу"}],
+    "senses": [
+      {"pos": "noun",
+       "definitions": {"en": "a book", "uz": "kitob"},
+       "translations": {"en": [{"text": "book", "is_primary": true}], "uz": [{"text": "kitob", "is_primary": true}], "tr": [{"text": "kitap", "is_primary": true}]},
+       "examples": [{"text": "Я читаю интересную книгу.", "translations": {"en": "I am reading an interesting book.", "uz": "Men qiziqarli kitob oʻqiyapman."}}]}
+    ]
+  },
+  {
+    "language_code": "ru", "lemma": "привет",
+    "senses": [
+      {"pos": "interj", "register": "informal",
+       "definitions": {"en": "an informal greeting; hi", "uz": "norasmiy salomlashish; salom"},
+       "translations": {"en": [{"text": "hi", "is_primary": true}, {"text": "hello"}], "uz": [{"text": "salom", "is_primary": true}], "tr": [{"text": "merhaba", "is_primary": true}, {"text": "selam"}]},
+       "examples": [{"text": "Привет! Как дела?", "translations": {"en": "Hi! How are you?", "uz": "Salom! Ishlar qalay?"}}]}
+    ]
+  },
+  {
+    "language_code": "ru", "lemma": "кринж", "tags": ["slang", "new"],
+    "etymology": {"en": "Borrowed from English cringe in the late 2010s.", "uz": "2010-yillar oxirida inglizcha cringe soʻzidan oʻzlashgan."},
+    "senses": [
+      {"pos": "noun", "register": "slang",
+       "definitions": {"en": "(slang) something awkward or embarrassing; cringe", "uz": "(jargon) uyatli, noqulay holat"},
+       "translations": {"en": [{"text": "cringe", "is_primary": true}], "uz": [{"text": "uyatli holat", "is_primary": true}], "tr": [{"text": "utanç verici durum", "is_primary": true}]},
+       "examples": [{"text": "Это видео — полный кринж.", "translations": {"en": "This video is total cringe.", "uz": "Bu video — butunlay uyatli."}}]}
+    ]
+  },
+  {
+    "language_code": "tr", "lemma": "okul",
+    "forms": [{"form": "okula"}, {"form": "okulda"}, {"form": "okullar", "tags": ["plural"]}],
+    "senses": [
+      {"pos": "noun",
+       "definitions": {"en": "school", "uz": "maktab"},
+       "translations": {"en": [{"text": "school", "is_primary": true}], "uz": [{"text": "maktab", "is_primary": true}], "ru": [{"text": "школа", "is_primary": true}]},
+       "examples": [{"text": "Çocuklar okula gidiyor.", "translations": {"en": "The children are going to school.", "uz": "Bolalar maktabga ketyapti."}}]}
+    ]
+  },
+  {
+    "language_code": "tr", "lemma": "kitap",
+    "forms": [{"form": "kitaplar", "tags": ["plural"]}],
+    "senses": [
+      {"pos": "noun",
+       "definitions": {"en": "book", "uz": "kitob"},
+       "translations": {"en": [{"text": "book", "is_primary": true}], "uz": [{"text": "kitob", "is_primary": true}], "ru": [{"text": "книга", "is_primary": true}]},
+       "examples": [{"text": "Bu kitap çok güzel.", "translations": {"en": "This book is very nice.", "uz": "Bu kitob juda yaxshi."}}]}
+    ]
+  },
+  {
+    "language_code": "tr", "lemma": "merhaba",
+    "senses": [
+      {"pos": "interj",
+       "definitions": {"en": "hello", "uz": "salom"},
+       "translations": {"en": [{"text": "hello", "is_primary": true}], "uz": [{"text": "salom", "is_primary": true}], "ru": [{"text": "здравствуйте", "is_primary": true}, {"text": "привет"}]},
+       "examples": [{"text": "Merhaba, nasılsın?", "translations": {"en": "Hello, how are you?", "uz": "Salom, qalaysan?"}}]}
+    ]
+  },
+  {
+    "language_code": "tr", "lemma": "İstanbul", "entry_type": "proper_noun",
+    "senses": [
+      {"pos": "proper_noun",
+       "definitions": {"en": "the largest city of Turkey, on both sides of the Bosphorus", "uz": "Turkiyaning eng yirik shahri, Bosfor boʻgʻozining ikki qirgʻogʻida joylashgan"},
+       "translations": {"en": [{"text": "Istanbul", "is_primary": true}], "uz": [{"text": "Istanbul", "is_primary": true}], "ru": [{"text": "Стамбул", "is_primary": true}]},
+       "examples": [{"text": "İstanbul iki kıtada yer alır.", "translations": {"en": "Istanbul lies on two continents.", "uz": "Istanbul ikki qitʼada joylashgan."}}]}
+    ]
+  }
+]
