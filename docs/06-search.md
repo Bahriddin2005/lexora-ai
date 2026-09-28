@@ -38,7 +38,7 @@ Til nomlari lug‘ati: `o‘zbekcha/o‘zbek tilida/uzbek/по-узбекски 
 Domen lug‘ati: `dasturlashda/programming/в программировании → computing`, `AI sohasida/sun’iy intellekt/ai → ai`,
 `tibbiyotda/medicine → medicine`, `iqtisodda/economics → economics`, `sportda/sports → sports`, `huquqda/law → law`.
 
-Regex mos kelmasa va so‘rov ≥ 3 so‘zdan iborat bo‘lsa → `IntentAgent` (LLM, JSON, Redis kesh). LLM yo‘q bo‘lsa → butun so‘rov `lookup`.
+Regex mos kelmasa va so‘rov ≥ 3 so‘zdan iborat bo‘lsa → `IntentAgent` (LLM, JSON, `ai_generations` keshi). LLM yo‘q bo‘lsa → butun so‘rov `lookup`.
 
 ## 3. Qidiruv tartibi (`services/search.py`)
 Nomzod tillar: `from` berilgan bo‘lsa — faqat u; aks holda barcha faol tillar (script bo‘yicha filtrlangan).

@@ -34,7 +34,7 @@ frontend:
 frontend-check:
 	cd frontend && npm run lint && npm run typecheck && npm run test
 
-e2e:
+e2e:           ## needs a running stack: backend with AI_PROVIDER=fake + seed + admin, and the frontend
 	cd frontend && npx playwright test
 
 test: backend-lint backend-test frontend-check

@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* Dark mode is toggled by the `dark` class on <html> (see ThemeToggle and the init script in layout.tsx). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Design tokens — docs/09-ui-design-system.md */
+:root {
+  --bg: #ffffff;
+  --surface: #f6f7fb;
+  --border: #e4e7ef;
+  --text: #0f172a;
+  --muted: #5b6477;
+  --brand: #4f46e5;
+  --accent: #0ea5e9;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+}
+
+.dark {
+  --bg: #0b0f17;
+  --surface: #121826;
+  --border: #232b3b;
+  --text: #e6e9f0;
+  --muted: #98a2b3;
+  --brand: #818cf8;
+  --accent: #38bdf8;
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --danger: #f87171;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--border);
+  --color-fg: var(--text);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-accent: var(--accent);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-sans: Inter, "Noto Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-ipa: "Charis SIL", "Noto Sans", "Doulos SIL", ui-serif, serif;
+}
+
+html {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 0.45);
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 rounded-lg border border-line bg-bg px-3 py-1.5 text-sm font-medium text-fg transition hover:bg-surface disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply border-transparent bg-brand text-white hover:bg-brand hover:opacity-90;
+  }
+  .btn-danger {
+    @apply border-transparent bg-danger text-white hover:bg-danger hover:opacity-90;
+  }
+  .input {
+    @apply w-full rounded-lg border border-line bg-bg px-3 py-2 text-sm text-fg placeholder:text-muted focus:border-brand focus:outline-none;
+  }
+  .card {
+    @apply rounded-xl border border-line bg-bg p-4;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full border border-line bg-surface px-2.5 py-0.5 text-sm text-fg;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-md px-1.5 py-0.5 text-xs font-medium;
+  }
+  .link {
+    @apply text-brand hover:underline;
+  }
+}

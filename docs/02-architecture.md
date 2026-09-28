@@ -80,7 +80,7 @@ Worker: EntryAgent → VerificationAgent → DB ga yozish (status ai_generated/d
 `POST /api/v1/words/{lang}/{slug}/explain` → kvota → kesh (ai_generations.input_hash) → bo‘lmasa Gemini stream → SSE `data: {"delta": "..."}` → oxirida keshga yoziladi.
 
 ### 3.4 Tarjima
-`POST /api/v1/translate` → qisqa matn bo‘lsa lug‘atdan → bo‘lmasa Redis kesh → Gemini (structured JSON) → kesh.
+`POST /api/v1/translate` → qisqa matn (≤ 3 so‘z) bo‘lsa lug‘atdan (AI’siz, bepul) → bo‘lmasa `ai_generations` keshi (`input_hash`) → kvota → Gemini (structured JSON) → natija log/keshga yoziladi.
 
 ### 3.5 TTS
 `GET /api/v1/tts?text=&lang=` → storage kaliti `tts/{sha256}.wav` → bor bo‘lsa qaytariladi → yo‘q bo‘lsa Gemini TTS → PCM → WAV → storage → qaytariladi.

@@ -65,7 +65,7 @@ Topilmasa va so‘z haqiqiyga o‘xshasa: `"job": {"id": "…", "status": "queue
 ```json
 {"id": "…", "status": "done", "word": {"language_code": "en", "slug": "vibecoding"}, "message": null, "suggestions": []}
 ```
-`status`: `queued` | `running` | `done` | `draft` (moderatsiyaga yuborildi) | `not_a_word` | `failed`.
+`status`: `queued` | `running` | `done` | `draft` (moderatsiyaga yuborildi) | `rejected` (past ishonch) | `not_a_word` | `failed`. `word` faqat saytda ko‘rinadigan yozuv uchun to‘ldiriladi.
 
 ## So‘zlar
 ### `GET /words/{lang}/{slug}?explain_lang=uz` → `WordEntry`
@@ -82,7 +82,7 @@ Topilmasa va so‘z haqiqiyga o‘xshasa: `"job": {"id": "…", "status": "queue
     "translations": {"uz": [{"text": "yugurmoq", "is_primary": true, "note": null, "slug": "yugurmoq"}],
                      "ru": [{"text": "бежать", "is_primary": true}], "tr": [{"text": "koşmak", "is_primary": true}]},
     "examples": [{"text": "She runs every morning.", "translations": {"uz": "U har tong yuguradi."}}],
-    "synonyms": ["sprint"], "antonyms": ["walk"]
+    "synonyms": [{"text": "sprint", "slug": null}], "antonyms": [{"text": "walk", "slug": null}]
   }],
   "relations": {"synonym": [{"text": "sprint", "slug": "sprint"}], "antonym": [], "related": [], "derived": [], "phrase": [{"text": "run out of"}]},
   "sources": [{"name": "Wiktionary", "url": "https://en.wiktionary.org/wiki/run", "license": "CC BY-SA 4.0"}],
@@ -134,7 +134,7 @@ data: {"done": true, "cached": false}
 | GET | `/admin/words?status=&lang=&q=&page=&size=` | editor | Ro‘yxat |
 | POST | `/admin/words` | editor | `{language_code, lemma, entry_type?}` qo‘lda yaratish (draft) |
 | POST | `/admin/words/generate` | editor | `{term, lang?}` → job |
-| GET | `/admin/words/{id}` | editor | `WordEntry` (har qanday status) + `versions[]` |
+| GET | `/admin/words/{id}` | editor | `{entry: WordEntry, form: WordEntryIn, versions[], reports[]}` (har qanday status) |
 | PUT | `/admin/words/{id}` | editor | `{entry: WordEntryIn, reason}` — to‘liq almashtirish, versiya +1 |
 | POST | `/admin/words/{id}/publish` | editor | → `published` |
 | POST | `/admin/words/{id}/reject` | editor | → `rejected` |

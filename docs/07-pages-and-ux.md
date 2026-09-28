@@ -109,7 +109,7 @@ Minimal forma, xatolar inline (o‘zbekcha), muvaffaqiyatdan so‘ng `next` ga q
 - Kvota tugadi: "Bugungi limit tugadi — ertaga qayta urinib ko‘ring yoki Pro’ga o‘ting".
 
 ## UI tillari
-`uz` (default), `en`, `ru` — `next-intl`, cookie `NEXT_LOCALE`; lug‘at kontenti tili UI tilidan mustaqil.
+`uz` (default), `en`, `ru` — yengil o‘z i18n qatlami (`frontend/src/i18n`, `next-intl` hali Next.js 16 ni rasman qo‘llamaydi), cookie `NEXT_LOCALE`; lug‘at kontenti tili UI tilidan mustaqil. Admin panel faqat o‘zbek tilida.
 
 ## Mobil
 Mobile-first: qidiruv to‘liq kenglikda, header menyusi burger, so‘z sahifasida sticky "🔊 ❤️" panel.

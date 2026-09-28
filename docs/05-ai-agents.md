@@ -99,8 +99,8 @@ Manba: `sources.code = gemini`; `word_versions` ga v1 snapshot.
 ### 3.5 Boshqa agentlar
 | Agent | Prompt | Model | Chiqish | Kesh |
 |---|---|---|---|---|
-| IntentAgent | `intent@1` | fast | `{type, term, source_lang, target_lang, domain, year}` | Redis 7 kun |
-| TranslateAgent | `translate@1` | fast | `{translation, detected_source, alternatives[], notes}` | Redis 30 kun |
+| IntentAgent | `intent@1` | fast | `{type, term, source_lang, target_lang, domain, year}` | `ai_generations` (input_hash) |
+| TranslateAgent | `translate@1` | fast | `{translation, detected_source, alternatives[], notes}` | `ai_generations` (input_hash) |
 | ExplainAgent | `explain@1` | fast (stream) | Markdown matn | `ai_generations` (input_hash) |
 | TTS | — | tts | WAV | Storage |
 

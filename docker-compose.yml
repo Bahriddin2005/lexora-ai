@@ -62,7 +62,10 @@ services:
     command: celery -A app.workers.celery_app worker -l info -Q lexora --concurrency 2
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      args:
+        BACKEND_URL: http://backend:8000
     environment:
       BACKEND_URL: http://backend:8000
     ports: ["3000:3000"]

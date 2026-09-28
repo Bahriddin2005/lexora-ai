@@ -6,7 +6,7 @@ Tarjimalar, izohlar va misollar **ma’noga (`word_senses`)** bog‘lanadi.
 ```
 languages ─┐
            ├──< words ──< word_senses ──< sense_definitions (izoh, har tilda)
-sources ───┘     │  │            ├──< translations ──> words (target_word_id, ixtiyoriy)
+sources ───┘     │  │            ├──< translations (maqsad tildagi yozuvga havola o‘qishda aniqlanadi)
                  │  │            ├──< examples (translations JSONB)
                  │  │            └──< word_relations (sense darajasida)
                  │  ├──< word_forms (ran → run)
@@ -132,7 +132,6 @@ Misol: `run` (verb, 1-ma’no) → `en`: "to move swiftly on foot", `uz`: "oyoqd
 | target_language | → languages | |
 | text | varchar(300) | "yugurmoq" |
 | normalized | varchar(300) | Reverse lookup uchun (indeks `(target_language, normalized)`) |
-| target_word_id | → words null | Maqsad tildagi yozuvga havola |
 | is_primary | bool | Asosiy tarjima |
 | note | varchar(300) null | "sport kontekstida" |
 | confidence | float null | |
@@ -142,7 +141,9 @@ Misol: `run` (verb, 1-ma’no) → `en`: "to move swiftly on foot", `uz`: "oyoqd
 `id, sense_id → word_senses (cascade), text text (so‘z tilida), translations jsonb ({"uz": "...", "ru": "..."}), source varchar(16) (dataset/ai/editor)`
 
 ### `word_relations`
-`id, word_id → words (cascade), sense_id → word_senses null (cascade), relation_type relation_type, target_text varchar(200), target_word_id → words null`
+`id, word_id → words (cascade), sense_id → word_senses null (cascade), relation_type relation_type, target_text varchar(200)`
+
+> Tarjima va sinonimlarning boshqa yozuvlarga havolasi (`slug`) saqlanmaydi — so‘z sahifasi o‘qilganda `(til, normalized)` bo‘yicha bitta so‘rov bilan aniqlanadi. Shu sababli yangi so‘z qo‘shilganda eski yozuvlardagi havolalar avtomatik paydo bo‘ladi.
 
 ### `word_sources`
 `id, word_id → words (cascade), source_id → sources, external_ref varchar(500) (URL/ID), retrieved_at timestamptz`
