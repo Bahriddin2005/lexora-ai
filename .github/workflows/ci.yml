@@ -104,7 +104,8 @@ jobs:
           cp -r .next/static .next/standalone/.next/
           # HOSTNAME is the runner's machine name on GitHub; bind the standalone server to all interfaces.
           PORT=3000 HOSTNAME=0.0.0.0 nohup node .next/standalone/server.js > frontend.log 2>&1 &
-          npx --yes wait-on -t 60000 http://localhost:3000 http://localhost:8000/healthz
+          # http-get: wait-on probes http:// with HEAD, which the GET-only /healthz answers with 405.
+          npx --yes wait-on -t 60000 http-get://localhost:3000 http-get://localhost:8000/healthz
       - run: npx playwright install --with-deps chromium
         working-directory: frontend
       - run: npx playwright test
