@@ -3,17 +3,80 @@ from datetime import datetime
 from fastapi import APIRouter, Depends, Query
 from pydantic import BaseModel
 from redis.asyncio import Redis
-from sqlalchemy import or_, select
+from sqlalchemy import func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.db import get_db
 from app.core.redis import get_redis
-from app.models import Word, WordSense
+from app.models import Translation, Word, WordSense
 from app.models.enums import VISIBLE_STATUSES
 from app.schemas.entry import WordSummary
-from app.services import dictionary, trending
+from app.services import dictionary, trending, web_dictionary
+from app.services.normalization import normalize
 
 router = APIRouter(tags=["discover"])
+
+
+class OnlineWord(BaseModel):
+    language_code: str
+    title: str
+    description: str | None
+    url: str
+
+
+class DictionaryPage(BaseModel):
+    items: list[WordSummary]
+    online_items: list[OnlineWord]
+    total: int
+    page: int
+    size: int
+
+
+@router.get("/dictionary", response_model=DictionaryPage)
+async def dictionary_words(
+    lang: str | None = None,
+    letter: str | None = Query(default=None, min_length=1, max_length=3),
+    q: str | None = Query(default=None, max_length=100),
+    page: int = Query(default=1, ge=1),
+    size: int = Query(default=40, ge=1, le=100),
+    session: AsyncSession = Depends(get_db),
+):
+    filters = [Word.status.in_(VISIBLE_STATUSES)]
+    if lang:
+        filters.append(Word.language_code == lang)
+    if letter:
+        filters.append(func.lower(Word.normalized).like(f"{letter.lower()}%"))
+    if q and (needle := normalize(q)):
+        translated = (
+            select(Translation.id)
+            .join(WordSense, Translation.sense_id == WordSense.id)
+            .where(WordSense.word_id == Word.id, func.lower(Translation.normalized).contains(needle))
+            .exists()
+        )
+        filters.append(or_(func.lower(Word.normalized).contains(needle), translated))
+
+    total = await session.scalar(select(func.count(Word.id)).where(*filters)) or 0
+    stmt = (
+        select(Word.id)
+        .where(*filters)
+        .order_by(Word.normalized, Word.language_code, Word.id)
+        .offset((page - 1) * size)
+        .limit(size)
+    )
+    ids = list((await session.scalars(stmt)).all())
+    online_items: list[OnlineWord] = []
+    if q and total == 0:
+        online_items = [
+            OnlineWord(**item.__dict__)
+            for item in await web_dictionary.search(q, preferred_language=lang)
+        ]
+    return DictionaryPage(
+        items=await dictionary.summaries(session, ids),
+        online_items=online_items,
+        total=total,
+        page=page,
+        size=size,
+    )
 
 
 @router.get("/trending", response_model=list[WordSummary])

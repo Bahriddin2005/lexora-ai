@@ -143,6 +143,15 @@ export type WordEntryIn = {
 
 export type Page<T> = { items: T[]; total: number; page: number; size: number };
 
+export type OnlineWord = {
+  language_code: string;
+  title: string;
+  description: string | null;
+  url: string;
+};
+
+export type DictionaryPage = Page<WordSummary> & { online_items: OnlineWord[] };
+
 export type AdminWordRow = {
   id: number;
   language_code: string;

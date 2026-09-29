@@ -42,6 +42,22 @@ async def test_reports(client, seeded):
 
 
 async def test_discover_lists(client, seeded):
+    dictionary = (await client.get("/api/v1/dictionary", params={"size": 100})).json()
+    assert dictionary["total"] == len(dictionary["items"])
+    assert dictionary["total"] >= 40
+    assert dictionary["items"] == sorted(
+        dictionary["items"], key=lambda word: (word["slug"], word["language_code"], word["id"])
+    )
+
+    english_b = (await client.get("/api/v1/dictionary", params={"lang": "en", "letter": "b"})).json()
+    assert english_b["items"] and all(
+        word["language_code"] == "en" and word["lemma"].lower().startswith("b")
+        for word in english_b["items"]
+    )
+
+    search_result = (await client.get("/api/v1/dictionary", params={"q": "olma"})).json()
+    assert any(word["lemma"] == "apple" for word in search_result["items"])
+
     ai_terms = {w["lemma"] for w in (await client.get("/api/v1/ai-terms")).json()}
     assert {"prompt", "LLM", "vibe coding", "hallucination"} <= ai_terms
     assert "run" not in ai_terms

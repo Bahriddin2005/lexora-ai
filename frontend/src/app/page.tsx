@@ -48,24 +48,24 @@ export default async function HomePage() {
   ]);
 
   return (
-    <div className="mx-auto max-w-6xl px-4">
-      <section className="flex flex-col items-center pb-12 pt-16 text-center sm:pt-24">
+    <div className="mx-auto max-w-6xl px-4 max-sm:px-5">
+      <section className="flex flex-col items-center pb-12 pt-16 text-center max-sm:items-start max-sm:pb-9 max-sm:pt-10 max-sm:text-left sm:pt-24">
         <h1>
           <Logo large />
         </h1>
-        <p className="mt-3 text-lg text-muted">{t("common.tagline")}</p>
-        <div className="mt-8 flex w-full justify-center">
+        <p className="mt-3 text-lg text-muted max-sm:max-w-64 max-sm:text-base">{t("common.tagline")}</p>
+        <div className="mt-8 flex w-full justify-center max-sm:mt-7">
           <SearchBox variant="hero" languages={languages} />
         </div>
       </section>
 
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-8 max-sm:gap-7 md:grid-cols-3">
         <Column title={t("home.trending")} href="/trending" words={trending.length ? trending : newWords} t={t} />
         <Column title={t("home.aiTerms")} href="/ai-terms" words={aiTerms} t={t} />
         <Column title={t("home.newWords")} href="/new" words={newWords} t={t} />
       </div>
 
-      <section className="mt-10 rounded-xl border border-dashed border-line p-5 text-center">
+      <section className="mt-10 rounded-xl border border-dashed border-line p-5 text-center max-sm:mt-8">
         <h2 className="font-semibold">{t("home.learn")}</h2>
         <p className="mt-1 text-sm text-muted">{t("home.learnSoon")}</p>
       </section>

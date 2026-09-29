@@ -1,20 +1,15 @@
 "use client";
 
-import { Flag, Heart, Share2 } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
+import { Flag, Share2 } from "lucide-react";
 import { useRef, useState } from "react";
 
 import { useI18n } from "@/i18n/client";
-import { ApiError, del, post } from "@/lib/client-api";
+import { post } from "@/lib/client-api";
 
 const REASONS = ["wrong_translation", "wrong_definition", "wrong_pronunciation", "offensive", "duplicate", "other"];
 
-export function WordActions({ wordId, initialFavorite }: { wordId: number; initialFavorite: boolean }) {
+export function WordActions({ wordId }: { wordId: number }) {
   const { t } = useI18n();
-  const router = useRouter();
-  const pathname = usePathname();
-  const [favorite, setFavorite] = useState(initialFavorite);
-  const [busy, setBusy] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [reason, setReason] = useState(REASONS[0]);
@@ -23,20 +18,6 @@ export function WordActions({ wordId, initialFavorite }: { wordId: number; initi
   const flash = (message: string) => {
     setToast(message);
     setTimeout(() => setToast(null), 2500);
-  };
-
-  const toggleFavorite = async () => {
-    setBusy(true);
-    try {
-      if (favorite) await del(`/me/favorites/${wordId}`);
-      else await post("/me/favorites", { word_id: wordId });
-      setFavorite(!favorite);
-    } catch (err) {
-      if (err instanceof ApiError && err.status === 401) router.push(`/login?next=${encodeURIComponent(pathname)}`);
-      else flash(t("common.error"));
-    } finally {
-      setBusy(false);
-    }
   };
 
   const share = async () => {
@@ -66,17 +47,6 @@ export function WordActions({ wordId, initialFavorite }: { wordId: number; initi
 
   return (
     <div className="flex items-center gap-1">
-      <button
-        type="button"
-        onClick={toggleFavorite}
-        disabled={busy}
-        aria-pressed={favorite}
-        className={`btn ${favorite ? "text-danger" : ""}`}
-        data-testid="favorite-button"
-      >
-        <Heart className={`size-4 ${favorite ? "fill-current" : ""}`} />
-        <span className="hidden sm:inline">{favorite ? t("word.saved") : t("word.save")}</span>
-      </button>
       <button type="button" onClick={() => dialogRef.current?.showModal()} className="btn" title={t("word.report")}>
         <Flag className="size-4" />
         <span className="sr-only">{t("word.report")}</span>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 
 import { currentUser } from "@/lib/server-api";
 
@@ -19,7 +19,7 @@ const NAV = [
 
 export default async function AdminLayout({ children }: LayoutProps<"/admin">) {
   const user = await currentUser();
-  if (!user) redirect("/login?next=/admin");
+  if (!user) notFound();
   if (user.role === "user") {
     return (
       <div className="mx-auto max-w-md px-4 py-24 text-center">

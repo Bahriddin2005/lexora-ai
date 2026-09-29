@@ -59,6 +59,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom));
+  }
+}
+
 :focus-visible {
   outline: 2px solid var(--brand);
   outline-offset: 2px;
@@ -92,5 +98,20 @@ dialog::backdrop {
   }
   .link {
     @apply text-brand hover:underline;
+  }
+  .mobile-dock {
+    @apply fixed inset-x-3 bottom-3 z-50 hidden h-16 items-center justify-around rounded-2xl border border-line bg-bg/95 px-1 shadow-[0_10px_35px_rgb(15_23_42/0.18)] backdrop-blur-xl;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .mobile-dock-item {
+    @apply flex min-w-14 flex-col items-center justify-center gap-1 rounded-xl px-2 py-2 text-[10px] font-medium text-muted;
+  }
+  .mobile-dock-item.is-active {
+    @apply bg-brand/10 text-brand;
+  }
+  @media (max-width: 767px) {
+    .mobile-dock {
+      @apply flex;
+    }
   }
 }

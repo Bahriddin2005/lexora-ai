@@ -140,7 +140,7 @@ export function SearchBox({ variant = "compact", languages = [], initialQuery = 
       >
         <div
           className={`flex items-center gap-2 rounded-full border border-line bg-bg shadow-sm focus-within:border-brand ${
-            hero ? "h-14 px-5" : "h-10 px-4"
+            hero ? "h-14 px-5 max-sm:h-16 max-sm:rounded-2xl" : "h-10 px-4"
           }`}
         >
           <Search aria-hidden className="size-5 shrink-0 text-muted" />
@@ -207,12 +207,12 @@ export function SearchBox({ variant = "compact", languages = [], initialQuery = 
       </form>
 
       {hero && languages.length > 0 && (
-        <div className="mt-4 flex items-center justify-center gap-3 text-sm">
+        <div className="mt-4 flex items-center justify-center gap-3 text-sm max-sm:w-full max-sm:gap-2">
           <select
             aria-label="From"
             value={from}
             onChange={(event) => savePair(event.target.value, to)}
-            className="rounded-lg border border-line bg-bg px-2 py-1"
+            className="min-w-0 rounded-lg border border-line bg-bg px-2 py-2 max-sm:flex-1"
           >
             <option value="auto">🌐 {t("home.auto")}</option>
             {languages.map((lang) => (
@@ -234,7 +234,7 @@ export function SearchBox({ variant = "compact", languages = [], initialQuery = 
             aria-label="To"
             value={to}
             onChange={(event) => savePair(from, event.target.value)}
-            className="rounded-lg border border-line bg-bg px-2 py-1"
+            className="min-w-0 rounded-lg border border-line bg-bg px-2 py-2 max-sm:flex-1"
           >
             {languages.map((lang) => (
               <option key={lang.code} value={lang.code}>

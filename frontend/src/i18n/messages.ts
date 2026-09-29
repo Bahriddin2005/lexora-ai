@@ -2,6 +2,7 @@
 
 export const uz = {
   common: {
+    home: "Bosh sahifa",
     tagline: "Dunyo tillari bitta joyda.",
     searchPlaceholder: "So‘z yoki ibora kiriting",
     search: "Qidirish",
@@ -22,7 +23,21 @@ export const uz = {
     language: "Interfeys tili",
     menu: "Menyu",
   },
-  nav: { translate: "Tarjima", trending: "Trending", newWords: "Yangi so‘zlar", aiTerms: "AI terminlar", about: "Loyiha haqida" },
+  nav: { dictionary: "Lug‘at", translate: "Tarjima", trending: "Trending", newWords: "Yangi so‘zlar", aiTerms: "AI terminlar", about: "Loyiha haqida" },
+  dictionary: {
+    title: "Lug‘at",
+    description: "Lexora’dagi barcha so‘zlar alifbo tartibida.",
+    allLanguages: "Barcha tillar",
+    allLetters: "Barchasi",
+    wordCount: "{n} ta so‘z",
+    empty: "Bu bo‘limda hozircha so‘z yo‘q.",
+    onlineTitle: "Internet lug‘atidan natijalar",
+    onlineHint: "Lexora bazasida topilmadi. O‘xshash natijalar Wiktionary’dan olindi.",
+    openSource: "Wiktionary’da ochish",
+    previous: "Oldingi",
+    next: "Keyingi",
+    page: "{current} / {total} sahifa",
+  },
   home: {
     trending: "🔥 Trending",
     aiTerms: "🤖 AI terminlar",
@@ -104,6 +119,13 @@ export const uz = {
     fromDictionary: "Lug‘atdan",
   },
   auth: {
+    welcomeTitle: "Shaxsiy lug‘atingiz doim yoningizda",
+    welcomeText: "So‘zlarni saqlang, o‘rganish tarixini boshqaring va Lexora’ni o‘zingizga moslang.",
+    mobileHint: "Saqlangan so‘zlar va shaxsiy sozlamalarga kirish uchun davom eting.",
+    confirmPassword: "Parolni tasdiqlang",
+    passwordMismatch: "Parollar bir xil emas",
+    showPassword: "Parolni ko‘rsatish",
+    hidePassword: "Parolni yashirish",
     email: "Email",
     password: "Parol",
     displayName: "Ism",
@@ -146,6 +168,7 @@ export type Messages = typeof uz;
 
 export const en: Messages = {
   common: {
+    home: "Home",
     tagline: "All the world’s languages in one place.",
     searchPlaceholder: "Type a word or phrase",
     search: "Search",
@@ -166,7 +189,21 @@ export const en: Messages = {
     language: "Interface language",
     menu: "Menu",
   },
-  nav: { translate: "Translate", trending: "Trending", newWords: "New words", aiTerms: "AI terms", about: "About" },
+  nav: { dictionary: "Dictionary", translate: "Translate", trending: "Trending", newWords: "New words", aiTerms: "AI terms", about: "About" },
+  dictionary: {
+    title: "Dictionary",
+    description: "Every word in Lexora, arranged alphabetically.",
+    allLanguages: "All languages",
+    allLetters: "All",
+    wordCount: "{n} words",
+    empty: "There are no words in this section yet.",
+    onlineTitle: "Results from the online dictionary",
+    onlineHint: "Not found in Lexora. Similar results were found on Wiktionary.",
+    openSource: "Open on Wiktionary",
+    previous: "Previous",
+    next: "Next",
+    page: "Page {current} of {total}",
+  },
   home: {
     trending: "🔥 Trending",
     aiTerms: "🤖 AI terms",
@@ -248,6 +285,13 @@ export const en: Messages = {
     fromDictionary: "From the dictionary",
   },
   auth: {
+    welcomeTitle: "Your personal dictionary, always with you",
+    welcomeText: "Save words, manage your learning history and make Lexora your own.",
+    mobileHint: "Continue to access saved words and personal settings.",
+    confirmPassword: "Confirm password",
+    passwordMismatch: "Passwords do not match",
+    showPassword: "Show password",
+    hidePassword: "Hide password",
     email: "Email",
     password: "Password",
     displayName: "Name",
@@ -289,6 +333,7 @@ export const en: Messages = {
 
 export const ru: Messages = {
   common: {
+    home: "Главная",
     tagline: "Все языки мира в одном месте.",
     searchPlaceholder: "Введите слово или фразу",
     search: "Искать",
@@ -309,7 +354,21 @@ export const ru: Messages = {
     language: "Язык интерфейса",
     menu: "Меню",
   },
-  nav: { translate: "Перевод", trending: "Тренды", newWords: "Новые слова", aiTerms: "ИИ-термины", about: "О проекте" },
+  nav: { dictionary: "Словарь", translate: "Перевод", trending: "Тренды", newWords: "Новые слова", aiTerms: "ИИ-термины", about: "О проекте" },
+  dictionary: {
+    title: "Словарь",
+    description: "Все слова Lexora в алфавитном порядке.",
+    allLanguages: "Все языки",
+    allLetters: "Все",
+    wordCount: "Слов: {n}",
+    empty: "В этом разделе пока нет слов.",
+    onlineTitle: "Результаты из интернет-словаря",
+    onlineHint: "В Lexora не найдено. Похожие результаты получены из Wiktionary.",
+    openSource: "Открыть в Wiktionary",
+    previous: "Назад",
+    next: "Далее",
+    page: "Страница {current} из {total}",
+  },
   home: {
     trending: "🔥 Тренды",
     aiTerms: "🤖 ИИ-термины",
@@ -391,6 +450,13 @@ export const ru: Messages = {
     fromDictionary: "Из словаря",
   },
   auth: {
+    welcomeTitle: "Ваш личный словарь всегда рядом",
+    welcomeText: "Сохраняйте слова, управляйте обучением и настройте Lexora под себя.",
+    mobileHint: "Войдите, чтобы открыть сохранённые слова и личные настройки.",
+    confirmPassword: "Подтвердите пароль",
+    passwordMismatch: "Пароли не совпадают",
+    showPassword: "Показать пароль",
+    hidePassword: "Скрыть пароль",
     email: "Email",
     password: "Пароль",
     displayName: "Имя",

@@ -9,10 +9,9 @@ import { SearchBox } from "@/components/SearchBox";
 import { useI18n } from "@/i18n/client";
 import { LOCALES } from "@/i18n/messages";
 import { useDarkMode } from "@/lib/browser-store";
-import { patch, post } from "@/lib/client-api";
-import type { User } from "@/lib/types";
 
 const NAV = [
+  { href: "/dictionary", key: "nav.dictionary" },
   { href: "/translate", key: "nav.translate" },
   { href: "/trending", key: "nav.trending" },
   { href: "/ai-terms", key: "nav.aiTerms" },
@@ -45,12 +44,11 @@ function ThemeToggle({ label }: { label: string }) {
   );
 }
 
-function LocaleSwitcher({ user }: { user: User | null }) {
+function LocaleSwitcher() {
   const { locale, t } = useI18n();
   const router = useRouter();
   const change = async (value: string) => {
     document.cookie = `NEXT_LOCALE=${value}; path=/; max-age=31536000; samesite=lax`;
-    if (user) await patch("/auth/me", { ui_language: value }).catch(() => undefined);
     router.refresh();
   };
   return (
@@ -69,23 +67,15 @@ function LocaleSwitcher({ user }: { user: User | null }) {
   );
 }
 
-export function Header({ user }: { user: User | null }) {
+export function Header() {
   const { t } = useI18n();
   const pathname = usePathname();
-  const router = useRouter();
   const [open, setOpen] = useState(false);
   const isHome = pathname === "/";
-  const isStaff = user?.role === "editor" || user?.role === "admin";
 
   // Close the mobile menu when a link inside it is followed.
   const closeOnLink = (event: React.MouseEvent) => {
     if ((event.target as HTMLElement).closest("a")) setOpen(false);
-  };
-
-  const logout = async () => {
-    await post("/auth/logout").catch(() => undefined);
-    router.push("/");
-    router.refresh();
   };
 
   const links = (
@@ -99,35 +89,12 @@ export function Header({ user }: { user: User | null }) {
           {t(item.key)}
         </Link>
       ))}
-      {isStaff && (
-        <Link href="/admin" className="whitespace-nowrap rounded-md px-2 py-1 hover:bg-surface">
-          {t("common.admin")}
-        </Link>
-      )}
     </>
-  );
-
-  const account = user ? (
-    <>
-      <Link href="/favorites" className="whitespace-nowrap rounded-md px-2 py-1 hover:bg-surface">
-        {t("common.favorites")}
-      </Link>
-      <Link href="/profile" className="max-w-40 truncate whitespace-nowrap rounded-md px-2 py-1 hover:bg-surface" data-testid="profile-link">
-        {user.display_name ?? t("common.profile")}
-      </Link>
-      <button type="button" onClick={logout} className="whitespace-nowrap rounded-md px-2 py-1 text-muted hover:bg-surface">
-        {t("common.logout")}
-      </button>
-    </>
-  ) : (
-    <Link href={`/login?next=${encodeURIComponent(pathname)}`} className="btn btn-primary whitespace-nowrap">
-      {t("common.login")}
-    </Link>
   );
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg/90 backdrop-blur">
-      <div className="mx-auto flex h-14 max-w-6xl items-center gap-3 px-4">
+      <div className="mx-auto flex h-14 max-w-6xl items-center gap-3 px-4 max-sm:h-16">
         <Link href="/" aria-label="Lexora AI" className="shrink-0">
           <Logo />
         </Link>
@@ -139,11 +106,10 @@ export function Header({ user }: { user: User | null }) {
         <nav className="ms-auto hidden items-center gap-1 text-sm xl:flex">{links}</nav>
         <div className="ms-auto flex shrink-0 items-center gap-1 text-sm xl:ms-0">
           <ThemeToggle label={t("common.theme")} />
-          <LocaleSwitcher user={user} />
-          {user ? <div className="hidden items-center gap-1 xl:flex">{account}</div> : account}
+          <LocaleSwitcher />
           <button
             type="button"
-            className="rounded-full p-2 hover:bg-surface xl:hidden"
+            className="hidden rounded-full p-2 hover:bg-surface md:block xl:hidden"
             aria-label={t("common.menu")}
             aria-expanded={open}
             onClick={() => setOpen(!open)}
@@ -153,7 +119,7 @@ export function Header({ user }: { user: User | null }) {
         </div>
       </div>
       {open && (
-        <div className="border-t border-line px-4 py-3 xl:hidden" onClick={closeOnLink}>
+        <div className="hidden border-t border-line px-4 py-3 md:block xl:hidden" onClick={closeOnLink}>
           {!isHome && (
             <div className="mb-3">
               <SearchBox key={`m-${pathname}`} />
@@ -161,7 +127,6 @@ export function Header({ user }: { user: User | null }) {
           )}
           <nav className="flex flex-col gap-1 text-sm">
             {links}
-            {user && account}
           </nav>
         </div>
       )}

@@ -1,0 +1,13 @@
+.git
+.claude-flow
+**/.env
+**/.env.*
+**/node_modules
+**/.next
+**/.pytest_cache
+**/__pycache__
+frontend/android
+frontend/coverage
+frontend/test-results
+backend/.venv
+backend/htmlcov

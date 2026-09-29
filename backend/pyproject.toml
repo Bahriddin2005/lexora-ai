@@ -13,6 +13,7 @@ dependencies = [
     "pydantic-settings>=2.3",
     "email-validator>=2.1",
     "redis>=5.0",
+    "fakeredis>=2.32",
     "celery[redis]>=5.4",
     "google-genai>=1.0",
     "pyjwt>=2.8",

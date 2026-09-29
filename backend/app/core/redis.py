@@ -6,6 +6,10 @@ _client: Redis | None = None
 
 
 def make_redis() -> Redis:
+    if settings.redis_url == "memory://":
+        from fakeredis.aioredis import FakeRedis
+
+        return FakeRedis(decode_responses=True)
     return Redis.from_url(settings.redis_url, decode_responses=True)
 
 

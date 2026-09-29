@@ -199,11 +199,11 @@ export default async function WordPage({ params }: PageProps<"/w/[lang]/[slug]">
   };
 
   return (
-    <article className="mx-auto max-w-3xl space-y-8 px-4 py-8" lang={locale}>
+    <article className="mx-auto max-w-3xl space-y-8 px-4 py-8 max-sm:space-y-6 max-sm:px-5 max-sm:py-6" lang={locale}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
 
       <header className="space-y-3">
-        <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-muted">
+        <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-muted max-sm:items-start">
           <div className="flex flex-wrap items-center gap-2">
             <span>
               {LANGUAGE_FLAGS[entry.language_code]} {t(`langs.${entry.language_code}`)}
@@ -217,10 +217,10 @@ export default async function WordPage({ params }: PageProps<"/w/[lang]/[slug]">
               </span>
             )}
           </div>
-          <WordActions wordId={entry.id} initialFavorite={entry.is_favorite} />
+          <WordActions wordId={entry.id} />
         </div>
 
-        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl" lang={entry.language_code} data-testid="headword">
+        <h1 className="text-4xl font-semibold tracking-tight max-sm:text-[2.65rem] sm:text-5xl" lang={entry.language_code} data-testid="headword">
           {entry.lemma}
         </h1>
 
