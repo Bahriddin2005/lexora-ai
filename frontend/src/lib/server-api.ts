@@ -4,13 +4,16 @@ import { cookies, headers } from "next/headers";
 import { ApiError, toApiError } from "./api-error";
 import type { User } from "./types";
 
-export const BACKEND_URL = process.env.BACKEND_URL ?? "http://localhost:8000";
+export const BACKEND_URL = process.env.BACKEND_URL ?? "";
 
 export async function apiServer<T>(path: string, init: RequestInit = {}): Promise<T> {
   const cookieStore = await cookies();
   const incoming = await headers();
+  const host = incoming.get("x-forwarded-host") ?? incoming.get("host") ?? "localhost:3000";
+  const proto = incoming.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
+  const apiOrigin = BACKEND_URL || `${proto}://${host}`;
   const forwardedFor = incoming.get("x-forwarded-for") ?? incoming.get("x-real-ip");
-  const res = await fetch(`${BACKEND_URL}/api/v1${path}`, {
+  const res = await fetch(`${apiOrigin}/api/v1${path}`, {
     ...init,
     headers: {
       "content-type": "application/json",
