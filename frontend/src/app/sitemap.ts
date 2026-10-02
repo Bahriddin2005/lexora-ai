@@ -13,6 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "daily",
   }));
   try {
+    if (!BACKEND_URL) return pages;
     const res = await fetch(`${BACKEND_URL}/api/v1/sitemap-words?size=45000`, { cache: "no-store" });
     const words: { language_code: string; slug: string; updated_at: string }[] = res.ok ? await res.json() : [];
     return [

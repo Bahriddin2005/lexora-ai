@@ -1,12 +1,14 @@
 import type { NextConfig } from "next";
 
-// Rewrites are resolved at build time, so BACKEND_URL must be set when running `next build`.
-const BACKEND_URL = process.env.BACKEND_URL ?? "http://localhost:8000";
+// A separate API is optional. Without it, Next.js serves its own /api/v1 routes.
+const BACKEND_URL = process.env.BACKEND_URL;
 
 const nextConfig: NextConfig = {
   output: "standalone",
   async rewrites() {
-    return [{ source: "/api/:path*", destination: `${BACKEND_URL}/api/:path*` }];
+    return BACKEND_URL
+      ? [{ source: "/api/:path*", destination: `${BACKEND_URL}/api/:path*` }]
+      : [];
   },
 };
 

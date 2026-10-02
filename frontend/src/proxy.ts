@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 
-const BACKEND_URL = process.env.BACKEND_URL ?? "http://localhost:8000";
+const BACKEND_URL = process.env.BACKEND_URL;
 
 function cookieValue(setCookies: string[], name: string): string | undefined {
   const raw = setCookies.find((c) => c.startsWith(`${name}=`));
@@ -13,6 +13,7 @@ function cookieValue(setCookies: string[], name: string): string | undefined {
  * server components see a logged-in user.
  */
 export async function proxy(request: NextRequest) {
+  if (!BACKEND_URL) return NextResponse.next();
   const refresh = request.cookies.get("lx_refresh")?.value;
   if (request.cookies.has("lx_access") || !refresh) return NextResponse.next();
 
